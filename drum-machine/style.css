@@ -1,0 +1,72 @@
+body {
+  background-color: #ddd;
+  font-family: sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#drum-machine {
+  width: 700px;
+  height: 300px;
+  outline: 5px solid #0d6efd;
+  background-color: #fff;
+}
+
+.fixed-width-column {
+  width: 340px;
+  flex: none;
+}
+
+@media screen and (max-width: 750px) {
+  #root {
+    transform: scale(0.7);
+  }
+
+  #drum-machine {
+    width: 345px;
+    height: 545px;
+  }
+}
+
+#drum-machine .pad-bank {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 8px;
+}
+
+#drum-machine .pad-bank .drum-pad {
+  width: 100px;
+  height: 80px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 3px 3px 5px black;
+}
+
+#drum-machine .controls-container #power,
+#drum-machine .controls-container #bank {
+  display: block;
+  margin: 1rem auto;
+}
+
+#drum-machine .controls-container #display {
+  width: 200px;
+  height: 55px;
+  font-weight: bold;
+  background-color: #ddd;
+  margin: 3rem auto;
+  padding: 15px;
+}
+
+#drum-machine .controls-container .volume-slider {
+  width: 200px;
+  margin: 0 auto;
+}
+
+input[type="range"] {
+  width: 200px;
+}
