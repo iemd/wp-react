@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+:root {
+  --primary: #00a8e8;
+  --secondary: #ffb400;
+  --text: #ffffff;
+  --accent: #baecff;
+  --bg: #0076a2;
+  --defaultColor: #007ba7;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+}
+
+span {
+  color: var(--accent);
+}
+
+body #container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body #container .main-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+body #container .length-control {
+  width: 250px;
+}
+
+button {
+  background-color: var(--primary);
+  outline: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:active {
+  color: var(--accent);
+}
+
+body #container .btn-label,
+body #container .length-control {
+  display: inline-block;
+}
+
+body #container .btn-label .btn-label:nth-child(3),
+body #container .length-control .btn-label:nth-child(3) {
+  width: 40px;
+}
+
+body #container .timer {
+  background-color: var(--defaultColor);
+  border: 7px solid var(--accent);
+  margin: 20px auto 10px auto;
+  width: 280px;
+  height: 180px;
+  border-radius: 50px;
+  position: relative;
+}
+
+body #container .timer .timer-wrapper {
+  position: absolute;
+  width: 280px;
+  height: 180px;
+  left: 50%;
+  top: 50%;
+  margin-left: -140px;
+  margin-top: -66px;
+}
+
+body #container .timer #time-left {
+  font-size: 80px;
+}
+
+body #container .timer-control button:active {
+  color: var(--accent);
+}
+
+@media screen and (max-width: 500px) {
+  #container {
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
+}
